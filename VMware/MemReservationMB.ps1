@@ -1,0 +1,2 @@
+#Gets VMs from a cluster, where the MemreservationMB is greater than 0.
+Get-Cluster -name "CLUSTER-NAME" | Get-VM | Get-VMResourceConfiguration | where {$_.MemreservationMB -gt 0} | select VM,MemReservationMB
